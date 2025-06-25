@@ -161,7 +161,7 @@ $(shell sed -i '/^extern void __init mnt_init/a int path_umount(struct path *pat
 $(info -- KSU_NEXT: adding 'int path_umount(struct path *path, int flags);' to $(srctree)/fs/internal.h)
 endif
 
-ccflags-y += -Wno-implicit-function-declaration -Wno-strict-prototypes -Wno-int-conversion -Wno-gcc-compat
+ccflags-y += -Wno-implicit-function-declaration -Wno-strict-prototypes -Wno-error -Wno-format
 ccflags-y += -Wno-declaration-after-statement -Wno-unused-function
 
 # Keep a new line here!! Because someone may append config
