@@ -503,7 +503,7 @@ __maybe_unused int ksu_handle_execve_ksud(const char __user *filename_user,
 	filename_in.name = path;
 	filename_p = &filename_in;
     
-	return ksu_handle_execveat_ksud(AT_FDCWD, &filename_p, &argv, NULL, NULL);
+	return ksu_handle_execveat_ksud((int *)AT_FDCWD, &filename_p, &argv, NULL, NULL);
 }
 
 #ifdef CONFIG_KSU_KPROBES_HOOK
